@@ -12,7 +12,7 @@ resultEl;
 let randomNumber = Math.random();
 let compuerMove = '';
 
-rock.addEventListener('click', function () {
+const Rules = function () {
   if (randomNumber >= 0 && randomNumber < 1 / 3) {
     compuerMove = 'rock';
   } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
@@ -20,6 +20,10 @@ rock.addEventListener('click', function () {
   } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
     compuerMove = 'scissors';
   }
+};
+
+rock.addEventListener('click', function () {
+  Rules();
 
   if (compuerMove === 'rock') {
     resultEl.innerHTML = `You Picked rock (✊)and computer picked ${compuerMove}(✊) its Tie.`;
@@ -31,13 +35,7 @@ rock.addEventListener('click', function () {
 });
 
 papper.addEventListener('click', function () {
-  if (randomNumber >= 0 && randomNumber < 1 / 3) {
-    compuerMove = 'rock';
-  } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
-    compuerMove = 'Papper';
-  } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
-    compuerMove = 'scissors';
-  }
+  Rules();
 
   if (compuerMove === 'Papper') {
     resultEl.innerHTML = `You Picked Papper (✋)and computer picked ${compuerMove}(✋) its Tie.`;
@@ -49,13 +47,7 @@ papper.addEventListener('click', function () {
 });
 
 scissors.addEventListener('click', function () {
-  if (randomNumber >= 0 && randomNumber < 1 / 3) {
-    compuerMove = 'rock';
-  } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
-    compuerMove = 'Papper';
-  } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
-    compuerMove = 'scissors';
-  }
+  Rules();
 
   if (compuerMove === 'scissors') {
     resultEl.innerHTML = `You Picked scissors (✌️)and computer picked ${compuerMove}(✌️) its Tie.`;

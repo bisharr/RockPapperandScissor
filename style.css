@@ -43,20 +43,24 @@ html {
 .btn {
   background-color: white;
   border: none;
+  width: 14rem;
+  height: 14rem;
+  margin-left: 1rem;
   padding: 4rem 4rem;
   border-radius: 50%;
   text-align: center;
-  font-size: 3.5rem;
+  font-size: 4.5rem;
   cursor: pointer;
 }
 .result {
   font-size: 2.4rem;
   letter-spacing: 3px;
   margin-top: 1.6rem;
+  font-weight: 500;
 }
 .bg-video {
   position: absolute;
-  max-width: 140rem;
+
   top: 0;
   left: 0;
   height: 100%;
